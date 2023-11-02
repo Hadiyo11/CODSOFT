@@ -17,7 +17,12 @@ module.exports = mongoose =>{
                 lowercase: true,
                 unique: true
             },
-            password
+            password:{
+                type: String, 
+                required: true
+            }
         }
     )
+    const User = mongoose.model("user", schema)
+    return User
 }
